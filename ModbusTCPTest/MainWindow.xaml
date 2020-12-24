@@ -1,0 +1,706 @@
+﻿<Window x:Class="ModbusTCPTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModbusTCPTest"
+        mc:Ignorable="d"
+        Title="CircuitWrapping" Height="900 " Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,1,0,-20">
+        <Button Content="Connect" HorizontalAlignment="Left" Height="28" Margin="1032,433,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click"/>
+        <Button Content="Disconect" HorizontalAlignment="Left" Margin="1032,498,0,0" VerticalAlignment="Top" Height="28" Width="143" Click="Button_Click_2"/>
+        <Image HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="474" Source="s-l1600 _its_me.jpg" Margin="43,-2,0,0"/>
+        <Ellipse x:Name="ellipseB171" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="124,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="115,246,0,0" TextWrapping="Wrap" Text="B171" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Image HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="474" Source="s-l1600 _its_me.jpg" Margin="43,424,0,0"/>
+        <Image HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="474" Source="s-l1600 _its_me.jpg" Margin="596,-2,0,0"/>
+        <Image HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="474" Source="s-l1600 _its_me.jpg" Margin="580,424,0,0"/>
+        <Button x:Name="btnSchema" Content="Open Schema" HorizontalAlignment="Left" Height="28" Margin="1032,557,0,0" VerticalAlignment="Top" Width="143" Click="btnSchema_Click"/>
+        <Ellipse x:Name="ellipseB171_Copy" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="154,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="145,247,0,0" TextWrapping="Wrap" Text="B173" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="169,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="160,247,0,0" TextWrapping="Wrap" Text="B174" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="243,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="234,247,0,0" TextWrapping="Wrap" Text="B181" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="258,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="247,245,0,0" TextWrapping="Wrap" Text="B182" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="681,221,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="670,244,0,0" TextWrapping="Wrap" Text="B261" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="708,221,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="697,244,0,0" TextWrapping="Wrap" Text="B263" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="724,221,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="713,244,0,0" TextWrapping="Wrap" Text="B264" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.684,3.233" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="39.703" Y="-53.957"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy7" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="797,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="786,245,0,0" TextWrapping="Wrap" Text="B271" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.425,3.262" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="49.695" Y="-45.137"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy8" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="811,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="800,245,0,0" TextWrapping="Wrap" Text="B272" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.425,3.262" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="49.695" Y="-45.137"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy9" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="825,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="814,245,0,0" TextWrapping="Wrap" Text="B273" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.425,3.262" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="49.695" Y="-45.137"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy10" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="840,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="829,245,0,0" TextWrapping="Wrap" Text="B274" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.425,3.262" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="49.695" Y="-45.137"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy11" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="344,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="332,671,0,0" TextWrapping="Wrap" Text="B208" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy12" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="329,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="316,669,0,0" TextWrapping="Wrap" Text="B207" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy13" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="297,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="286,670,0,0" TextWrapping="Wrap" Text="B205" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.601,-1.124" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="-30.688" Y="25.096"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy14" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="282,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="270,670,0,0" TextWrapping="Wrap" Text="B204" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.601,-1.124" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="-30.688" Y="25.096"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy15" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="268,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="254,668,0,0" TextWrapping="Wrap" Text="B203" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.601,-1.124" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="-30.688" Y="25.096"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy16" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="255,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="240,669,0,0" TextWrapping="Wrap" Text="B202" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.601,-1.124" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="-30.688" Y="25.096"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy17" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="241,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="213,683,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.601,-1.124" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="-30.688" Y="25.096"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="B201"/><LineBreak/><Run/></TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy18" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="225,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="214,670,0,0" TextWrapping="Wrap" Text="B198" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.601,-1.124" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="-30.688" Y="25.096"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy19" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="211,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="202,673,0,0" TextWrapping="Wrap" Text="B197" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.601,-1.124" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="-30.688" Y="25.096"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy20" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="196,648,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="183,670,0,0" TextWrapping="Wrap" Text="B196" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.601,-1.124" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform X="-30.688" Y="25.096"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy21" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="882,649,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="870,672,0,0" TextWrapping="Wrap" Text="B298" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy22" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="869,649,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="857,672,0,0" TextWrapping="Wrap" Text="B297" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy23" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="853,649,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="841,672,0,0" TextWrapping="Wrap" Text="B296" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy24" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="838,649,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="826,672,0,0" TextWrapping="Wrap" Text="B295" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <ComboBox x:Name="comboIpConnect"  HorizontalAlignment="Left" Height="28" Margin="1032,370,0,0" VerticalAlignment="Top" Width="143" >
+            <ComboBoxItem Content="192.168.79.51" Name="OM1" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem Content="192.168.79.52" Name="OM2"></ComboBoxItem>
+            <ComboBoxItem Content="192.168.79.53" Name="OM3"></ComboBoxItem>
+        </ComboBox>
+        <Ellipse x:Name="ellipseB171_Copy25" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="124,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy26" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="137,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy27" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="149,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy28" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="163,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy29" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="178,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy30" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="193,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy31" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="208,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy32" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="224,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy33" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="239,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy34" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="255,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy35" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="270,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy36" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="285,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy37" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="299,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="113,716,0,0" TextWrapping="Wrap" Text="Y231" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="127,716,0,0" TextWrapping="Wrap" Text="Y232" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="140,716,0,0" TextWrapping="Wrap" Text="Y233" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="153,716,0,0" TextWrapping="Wrap" Text="Y234" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="168,716,0,0" TextWrapping="Wrap" Text="Y235" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="183,716,0,0" TextWrapping="Wrap" Text="Y236" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="197,716,0,0" TextWrapping="Wrap" Text="Y237" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="213,716,0,0" TextWrapping="Wrap" Text="Y238" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="228,716,0,0" TextWrapping="Wrap" Text="Y241" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="244,716,0,0" TextWrapping="Wrap" Text="Y242" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="260,716,0,0" TextWrapping="Wrap" Text="Y243" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="275,716,0,0" TextWrapping="Wrap" Text="Y244" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="289,716,0,0" TextWrapping="Wrap" Text="Y245" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="289,716,0,0" TextWrapping="Wrap" Text="Y245" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="705,716,0,0" TextWrapping="Wrap" Text="Y312" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy40" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="716,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy41" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="731,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy42" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="747,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy43" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="762,700,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="720,716,0,0" TextWrapping="Wrap" Text="Y311" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="737,716,0,0" TextWrapping="Wrap" Text="Y337" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="752,716,0,0" TextWrapping="Wrap" Text="Y338" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Ellipse x:Name="ellipseB171_Copy44" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="870,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy45" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="856,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy46" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="841,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy47" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="824,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy48" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="809,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy49" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="793,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy50" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="719,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy51" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="703,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy52" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="285,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy53" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="269,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy54" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="226,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy55" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="209,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy56" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="195,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy57" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="167,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy58" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="152,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy59" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="136,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <Ellipse x:Name="ellipseB171_Copy60" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="121,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="860,293,0,0" TextWrapping="Wrap" Text="Y326" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="845,293,0,0" TextWrapping="Wrap" Text="Y325" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="831,293,0,0" TextWrapping="Wrap" Text="Y324" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="814,293,0,0" TextWrapping="Wrap" Text="Y323" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="799,293,0,0" TextWrapping="Wrap" Text="Y322" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="783,293,0,0" TextWrapping="Wrap" Text="Y321" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="708,293,0,0" TextWrapping="Wrap" Text="Y314" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="692,293,0,0" TextWrapping="Wrap" Text="Y313" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="274,293,0,0" TextWrapping="Wrap" Text="Y224" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="258,293,0,0" TextWrapping="Wrap" Text="Y223" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="216,293,0,0" TextWrapping="Wrap" Text="Y218" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="199,293,0,0" TextWrapping="Wrap" Text="Y217" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="184,293,0,0" TextWrapping="Wrap" Text="Y216" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="156,293,0,0" TextWrapping="Wrap" Text="Y214" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="142,293,0,0" TextWrapping="Wrap" Text="Y213" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="126,293,0,0" TextWrapping="Wrap" Text="Y212" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="110,293,0,0" TextWrapping="Wrap" Text="Y211" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5" FontFamily="Sitka Small" FontWeight="Bold" Foreground="#FF640000">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.078"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Menu HorizontalAlignment="Center" Height="22" Margin="8,-1,-8,0" VerticalAlignment="Top" Width="1194">
+            <MenuItem Header="File" Height="22" Width="100">
+                <MenuItem Header="Open" HorizontalAlignment="Left" Height="20" Width="140" Margin="23,0,-23,0"/>
+                <MenuItem Header="Close" HorizontalAlignment="Left" Height="20" Width="140" Margin="23,0,-23,0"/>
+            </MenuItem>
+            <MenuItem Header="Help" Height="25" Width="100">
+                <MenuItem Header="Разработал" HorizontalAlignment="Left" Height="20" Width="150" Margin="23,0,-23,0"/>
+                <MenuItem Header="Help" HorizontalAlignment="Left" Height="20" Width="140" Margin="23,0,-23,0"/>
+            </MenuItem>
+
+        </Menu>
+        <Button x:Name="Error" Content="Ошибки" HorizontalAlignment="Left" Height="28" Margin="1032,611,0,0" VerticalAlignment="Top" Width="143" Click="Error_Click"/>
+
+
+    </Grid>
+</Window>

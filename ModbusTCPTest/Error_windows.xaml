@@ -1,0 +1,13 @@
+﻿<Window x:Class="ModbusTCPTest.Error_windows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModbusTCPTest"
+        mc:Ignorable="d"
+        Title="Error_windows" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="errWindows" Content="Закрыть" HorizontalAlignment="Left" Height="32" Margin="687,360,0,0" VerticalAlignment="Top" Width="70" Click="errWindows_Click"/>
+
+    </Grid>
+</Window>
