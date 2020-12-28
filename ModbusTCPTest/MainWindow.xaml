@@ -300,7 +300,7 @@
             </TextBlock.RenderTransform>
         </TextBlock>
         <ComboBox x:Name="comboIpConnect"  HorizontalAlignment="Left" Height="28" Margin="1032,370,0,0" VerticalAlignment="Top" Width="143" >
-            <ComboBoxItem Content="192.168.79.51" Name="OM1" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem Content="192.168.1.5" Name="OM1" IsSelected="True"></ComboBoxItem>
             <ComboBoxItem Content="192.168.79.52" Name="OM2"></ComboBoxItem>
             <ComboBoxItem Content="192.168.79.53" Name="OM3"></ComboBoxItem>
         </ComboBox>
