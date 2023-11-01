@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="CircuitWrapping" Height="900 " Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,1,0,-20">
-        <Button Content="Connect" HorizontalAlignment="Left" Height="28" Margin="1032,433,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click"/>
+        <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Height="28" Margin="1032,433,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click"/>
         <Button Content="Disconect" HorizontalAlignment="Left" Margin="1032,498,0,0" VerticalAlignment="Top" Height="28" Width="143" Click="Button_Click_2"/>
         <Image HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="474" Source="s-l1600 _its_me.jpg" Margin="43,-2,0,0"/>
         <Ellipse x:Name="ellipseB171" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="124,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Panel.ZIndex="2" RenderTransformOrigin="2.1,3"/>

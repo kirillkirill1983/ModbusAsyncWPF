@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using EasyModbus;
 
@@ -23,16 +14,17 @@ namespace ModbusTCPTest
     public partial class MainWindow : Window
     {
         ModbusClient modbusClient;
-        
+
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
             try
             {
                 ComboBoxItem selectItem = (ComboBoxItem)(comboIpConnect.SelectedValue);
@@ -54,8 +46,11 @@ namespace ModbusTCPTest
                 //timer.Tick += ReadCoil251;
                 //timer.Tick += ReadCoil231;
                 //timer.Tick += ReadCoi141;
-                 timer.Start();
-                //RunAllAsync();
+                timer.Start();
+                ;
+
+
+
             }
             catch (Exception ex)
             {
@@ -64,15 +59,14 @@ namespace ModbusTCPTest
             }
         }
 
-        private void RunAllAsync(object sender,EventArgs e)
+        private void RunAllAsync(object w, EventArgs s)
         {
-            
-            var result= Task.Run(() =>
-            {
-                ReadDiscret141();
-                ReadDiscret231();
-                ReadDiscret161();
-            });
+            var result = Task.Run(() =>
+             {
+                 ReadDiscret141();
+                 ReadDiscret231();
+                 ReadDiscret161();
+             });
 
             Task.WaitAll(result);
         }
@@ -86,7 +80,7 @@ namespace ModbusTCPTest
             );
         }
 
-        private  async void  ReadDiscret141()
+        private async void ReadDiscret141()
         {
             //var readCoilD141_1 =  modbusClient.ReadDiscreteInputs(374, 10);
             var readCoilD141_1 = await ReturnInputDiscretasync141(1, modbusClient);
@@ -142,7 +136,7 @@ namespace ModbusTCPTest
                         ellipseB171_Copy3.Fill = new SolidColorBrush(Colors.Black);
                     }
                 });
-                //Task.Delay(500);
+                Task.Delay(500);
             });
         }
 
@@ -222,7 +216,7 @@ namespace ModbusTCPTest
                         ellipseB171_Copy10.Fill = new SolidColorBrush(Colors.Black);
                     }
                 });
-                //Task.Delay(500);
+                Task.Delay(500);
             });
         }
 
@@ -237,7 +231,7 @@ namespace ModbusTCPTest
             }
             );
         }
-        
+
         private async void ReadDiscret161()
         {
             //var readCoilD161 = modbusClient.ReadDiscreteInputs(384, 11);
@@ -768,7 +762,7 @@ namespace ModbusTCPTest
         private void Error_Click(object sender, RoutedEventArgs e)
         {
             Error_windows error_Windows = new Error_windows();
-            
+
             error_Windows.Show();
         }
     }

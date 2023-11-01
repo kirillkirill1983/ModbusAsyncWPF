@@ -41,7 +41,6 @@ G:\ModbuTestAsync\ModbusTCPTest\bin\Debug\ModbusTCPTest.exe.config
 G:\ModbuTestAsync\ModbusTCPTest\bin\Debug\ModbusTCPTest.exe
 G:\ModbuTestAsync\ModbusTCPTest\bin\Debug\ModbusTCPTest.pdb
 G:\ModbuTestAsync\ModbusTCPTest\bin\Debug\EasyModbus.dll
-G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.csprojAssemblyReference.cache
 G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\Error_windows.g.cs
 G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\MainWindow.g.cs
 G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\winDiagnost.g.cs
@@ -55,6 +54,8 @@ G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.g.resources
 G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.Properties.Resources.resources
 G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.csproj.GenerateResource.cache
 G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.csproj.CoreCompileInputs.cache
-G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.csproj.CopyComplete
 G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.exe
 G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.pdb
+G:\ModbuTestAsync\ModbusTCPTest\bin\Debug\EasyModbus.xml
+G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.csproj.AssemblyReference.cache
+G:\ModbuTestAsync\ModbusTCPTest\obj\Debug\ModbusTCPTest.csproj.SuggestedBindingRedirects.cache
